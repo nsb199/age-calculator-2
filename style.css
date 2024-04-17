@@ -125,3 +125,55 @@ p {
   text-align: center;
   z-index: 1000;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80%; /* Adjust width to fit smaller screens */
+    min-width: unset; /* Remove minimum width */
+    padding: 30px 15px; /* Decrease padding */
+  }
+
+  .inputs-wrapper {
+    padding: 20px 15px; /* Decrease padding */
+  }
+
+  input {
+    width: 50%; /* Adjust input width */
+    font-size: 12px; /* Decrease font size */
+  }
+
+  button {
+    width: 40%; /* Adjust button width */
+    font-size: 12px; /* Decrease font size */
+  }
+
+  .outputs-wrapper {
+    flex-direction: column; /* Stack outputs vertically */
+    gap: 10px; /* Add space between outputs */
+  }
+
+  .outputs-wrapper div {
+    width: 100%; /* Full width for output boxes */
+    height: auto; /* Auto height */
+    padding: 15px 0; /* Decrease padding */
+    font-size: 12px; /* Decrease font size */
+  }
+
+  span {
+    font-size: 24px; /* Decrease font size */
+  }
+
+  p {
+    font-size: 10px; /* Decrease font size */
+  }
+
+  .message {
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+   
+  }
+  
+}
