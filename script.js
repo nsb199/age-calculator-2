@@ -6,38 +6,39 @@ setTimeout(() => {
 
 
 function displayMessage(message) {
-    const messageElement = document.createElement("div");
-    messageElement.classList.add("message");
-    messageElement.textContent = message;
-    document.body.appendChild(messageElement);
+    if (window.innerWidth <= 600) {
+        alert(message); // Show message in an alert box
+    } else {
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("message");
+        messageElement.textContent = message;
+        document.body.appendChild(messageElement);
 
-   
-    messageElement.style.fontFamily = "Arial, sans-serif";
-    messageElement.style.fontWeight = "bold";
-    messageElement.style.color = "white";
-    messageElement.style.fontSize = "2rem";
-    messageElement.style.opacity = "0"; 
-    messageElement.style.position = "absolute";
-    messageElement.style.left = "50%";
-    messageElement.style.transform = "translate(-50%, -110%)"; 
+        messageElement.style.fontFamily = "Arial, sans-serif";
+        messageElement.style.fontWeight = "bold";
+        messageElement.style.color = "white";
+        messageElement.style.fontSize = "2rem";
+        messageElement.style.opacity = "0";
+        messageElement.style.position = "absolute";
+        messageElement.style.left = "50%";
+        messageElement.style.transform = "translate(-50%, -110%)";
 
-   
-    messageElement.offsetHeight;
+        messageElement.offsetHeight;
 
-    
-    messageElement.style.transition = "opacity 0.5s, transform 0.5s";
-    messageElement.style.opacity = "1"; 
-    messageElement.style.transform = "translate(-50%, -50%)"; 
+        messageElement.style.transition = "opacity 0.5s, transform 0.5s";
+        messageElement.style.opacity = "1";
+        messageElement.style.transform = "translate(-50%, -50%)";
 
- 
-    setTimeout(() => {
-        messageElement.style.opacity = "0"; 
-        messageElement.style.transform = "translate(-50%, -110%)"; 
         setTimeout(() => {
-            messageElement.remove();
-        }, 500); 
-    }, 3000); 
+            messageElement.style.opacity = "0";
+            messageElement.style.transform = "translate(-50%, -110%)";
+            setTimeout(() => {
+                messageElement.remove();
+            }, 500);
+        }, 3000);
+    }
 }
+
 
 function calculateAge() {
     let inputDateValue = document.getElementById("date-input").value;
