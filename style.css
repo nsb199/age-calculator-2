@@ -109,8 +109,8 @@ p {
 }
 
 .message {
-  position: fixed;
-  top: 200px;
+  
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #696969;
