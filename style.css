@@ -125,57 +125,74 @@ p {
   text-align: center;
   z-index: 1000;
 }
-
-
-
 @media only screen and (max-width: 600px) {
   .container {
-    width: 80%; /* Adjust width to fit smaller screens */
-    min-width: unset; /* Remove minimum width */
-    padding: 30px 15px; /* Decrease padding */
+    width: 80%;
+    min-width: unset;
+    padding: 30px 15px;
   }
 
   .inputs-wrapper {
-    padding: 20px 15px; /* Decrease padding */
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%; 
+    margin-bottom: 1rem;
+    
   }
 
   input {
-    width: 50%; /* Adjust input width */
-    font-size: 12px; /* Decrease font size */
+    width: 100%; /* Set the width to 100% */
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    background-color: #f58989;
   }
 
   button {
-    width: 40%; /* Adjust button width */
-    font-size: 12px; /* Decrease font size */
+    width: 100%; /* Set the width to 100% */
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    background-color: #00a0eb;
   }
 
   .outputs-wrapper {
-    flex-direction: column; /* Stack outputs vertically */
-    gap: 10px; /* Add space between outputs */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Set the width to 100% */
   }
 
   .outputs-wrapper div {
-    width: 100%; /* Full width for output boxes */
-    height: auto; /* Auto height */
-    padding: 15px 0; /* Decrease padding */
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
     margin-bottom: 2rem;
-    font-size: 12px; /* Decrease font size */
+    font-size: 12px;
+    background-color: #ffffffc7;
   }
 
   span {
-    font-size: 24px; /* Decrease font size */
+    font-size: 1rem;
   }
 
   p {
-    font-size: 10px; /* Decrease font size */
+    font-size: 1rem;
   }
 
   .message {
-    font-size: 1.5rem; /* Adjust the font size for smaller screens */
+    font-size: 1.5rem;
     top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 26rem;
+  }
 }
 
-}
+
